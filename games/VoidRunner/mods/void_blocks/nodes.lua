@@ -10,7 +10,7 @@ register_node('void_blocks:stone', {
 
 register_node('void_blocks:grass', {
     description = 'Grama',
-    tiles = { 'void_grass_texture.png' },
+    tiles = { 'void_grass_texture.png','void_dirt_texture.png^void_top_grass_texture.png' },
     groups = { oddly_breakable_by_hand = 3 },
     is_ground_content = true
 })
@@ -26,12 +26,13 @@ register_node('void_blocks:water', {
     description = 'Água',
     drawtype = 'liquid',
     tiles = { 'void_water_texture.png' },
+    liquid_range = 12,
     walkable = false,
     pointable = false,
     diggable = false,
     liquid_viscosity = 0.5,
     groups = {water = 3, oddly_breakable_by_hand = 1},
-    is_ground_content = true
+    is_ground_content = false
 })
 
 register_alias('mapgen_stone', 'void_blocks:stone')
